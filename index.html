@@ -18,35 +18,213 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Mi Primera Página Web</title>
+    <title>ToolRent - Alquiler de Herramientas</title>
 </head>
 
 <body>
 
-    <!-- Menú -->
-    <nav class="navbar navbar-dark bg-primary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi Sitio Web</a>
+            <a class="navbar-brand fw-bold" href="#">🔧 ToolShare</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#herramientas">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Contenido Principal -->
-    <div class="container mt-5">
-        <div class="text-center">
-            <h1>Bienvenido a mi Página Web</h1>
-            <p class="lead">
-                Esta es una página creada con HTML y Bootstrap.
-            </p>
+    <!-- Carrusel -->
+    <section id="inicio">
+        <div id="carouselHerramientas" class="carousel slide" data-bs-ride="carousel">
 
-            <button class="btn btn-success">
-                Conocer más
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselHerramientas" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselHerramientas" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselHerramientas" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600" class="d-block w-100"
+                        style="height:500px; object-fit:cover;">
+                    <div class="carousel-caption">
+                        <h2>Alquiler de Herramientas Profesionales</h2>
+                        <p>Equipos para construcción, carpintería y mantenimiento.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600" class="d-block w-100"
+                        style="height:500px; object-fit:cover;">
+                    <div class="carousel-caption">
+                        <h2>Entrega Rápida</h2>
+                        <p>Disponibilidad inmediata para tus proyectos.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHerramientas"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-        </div>
-    </div>
 
-    <!-- Pie de página -->
-    <footer class="bg-light text-center p-3 mt-5">
-        © 2026 Mi Sitio Web
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHerramientas"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Presentación -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>¿Por qué elegirnos?</h2>
+            <p class="lead">
+                Contamos con herramientas modernas y en excelente estado para
+                facilitar tus proyectos de construcción, remodelación y mantenimiento.
+            </p>
+        </div>
+    </section>
+
+    <!-- Herramientas -->
+    <section id="herramientas" class="container py-5">
+        <h2 class="text-center mb-4">Herramientas Destacadas</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" class="card-img-top"
+                        alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Taladro Industrial</h5>
+                        <p class="card-text">
+                            Potente taladro para trabajos profesionales.
+                        </p>
+                        <a href="#" class="btn btn-primary">Alquilar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600" class="card-img-top"
+                        alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Mezcladora de Concreto</h5>
+                        <p class="card-text">
+                            Ideal para proyectos de construcción.
+                        </p>
+                        <a href="#" class="btn btn-primary">Alquilar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Servicios</h2>
+
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <h4>🚚 Entrega a Domicilio</h4>
+                    <p>Recibe tus herramientas directamente en tu obra.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>🛠 Mantenimiento Garantizado</h4>
+                    <p>Equipos revisados antes de cada alquiler.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>📞 Soporte Técnico</h4>
+                    <p>Asistencia durante todo el período de alquiler.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container py-5">
+        <h2 class="text-center mb-4">Solicita Información</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control required">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Seleccione una herramienta</label>
+
+                        <select class="form-select">
+                            <option selected>Seleccione una Herramienta</option>
+                            <option value="1">Taladro Industrial</option>
+                            <option value="2">Sierra Eléctrica</option>
+                            <option value="3">Mezcladora de Concreto</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+
+                    <button class="btn btn-success">
+                        Enviar Consulta
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h5>🔧 Toolshare</h5>
+            <p>
+                Alquiler de herramientas en Piura.
+            </p>
+            <p class="mb-0">
+                © 2026 Toolshare - Todos los derechos reservados.
+            </p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
